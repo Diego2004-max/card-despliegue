@@ -3,10 +3,10 @@ export default function Home() {
       <div className="bg-gray-100 p-4 sm:p-6">
         <div className="max-w-7xl mx-auto space-y-6">
           
-          {/* Bloque principal */}
+          
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
             
-            {/* Artículo principal */}
+            
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm">
                 <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
@@ -47,46 +47,47 @@ export default function Home() {
               </div>
             </div>
   
-            {/* Categorías */}
+            
             <div>
               <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm space-y-3">
-                {[
-                  { icon: "/globe.svg", text: "Global" },
-                  { icon: "/file.svg", text: "Business" },
-                  { icon: "/play.webp", text: "Entertainment" },
-                  { icon: "/sports.webp", text: "Sports", active: true },
-                  { icon: "/health.webp", text: "Health" }
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer ${
-                      item.active
-                        ? "bg-blue-50 text-blue-600 font-medium"
-                        : "hover:bg-gray-50 text-gray-700"
-                    }`}
-                  >
-                    <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                        item.active ? "bg-blue-500" : "bg-gray-200"
-                      }`}
-                    >
-                      <img
-                        src={item.icon}
-                        alt={item.text}
-                        className="w-4 h-4"
-                      />
-                    </div>
-                    <span>{item.text}</span>
+                <div className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-gray-50 text-gray-700">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200">
+                    <img src="/globe.svg" alt="Global" className="w-4 h-4"/>
                   </div>
-                ))}
+                  <span>Global</span>
+                </div>
+                <div className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-gray-50 text-gray-700">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200">
+                    <img src="/file.svg" alt="Business" className="w-4 h-4"/>
+                  </div>
+                  <span>Business</span>
+                </div>
+                <div className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-gray-50 text-gray-700">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200">
+                    <img src="/play.webp" alt="Entertainment" className="w-4 h-4"/>
+                  </div>
+                  <span>Entertainment</span>
+                </div>
+                <div className="flex items-center gap-3 p-2 rounded-lg cursor-pointer bg-blue-50 text-blue-600 font-medium">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-blue-500">
+                    <img src="/sports.webp" alt="Sports" className="w-4 h-4"/>
+                  </div>
+                  <span>Sports</span>
+                </div>
+                <div className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-gray-50 text-gray-700">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200">
+                    <img src="/health.webp" alt="Health" className="w-4 h-4"/>
+                  </div>
+                  <span>Health</span>
+                </div>
               </div>
             </div>
           </div>
   
-          {/* Sección de artículos secundarios */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 mb-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 mb-8 h-120">
             
-            {/* Artículo grande */}
+            
             <div className="lg:row-span-2">
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-full">
                 <div className="h-80">
@@ -115,13 +116,13 @@ export default function Home() {
               </div>
             </div>
   
-            {/* Sub-sección derecha */}
+            
             <div className="lg:col-span-2 grid grid-cols-1 gap-6">
               
-              {/* Buscador + Tags + Video */}
+              
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 
-                {/* Buscador */}
+                
                 <div className="bg-white rounded-2xl p-4 shadow-sm">
                   <div className="mb-6">
                     <div className="flex">
@@ -136,19 +137,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["#Politics", "#Science", "#Movies", "#Technology"].map((tag, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">#Politics</span>
+                    <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">#Science</span>
+                    <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">#Movies</span>
+                    <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">#Technology</span>
                   </div>
                 </div>
   
-                {/* Tarjeta video */}
-                <div className="bg-white rounded-2xl p-6 shadow-sm flex items-center gap-4">
+                
+                <div className="bg-white rounded-2xl p-6 shadow-sm flex items-center gap-4 w-85">
                   <img 
                     src="/edificio.webp" 
                     alt="Edificio moderno" 
@@ -158,7 +155,7 @@ export default function Home() {
                     <div className="w-6 h-6 flex items-center justify-center rounded-full border border-blue-500 text-blue-500 mb-2">
                       ▶
                     </div>
-                    <h2 className="font-semibold text-gray-900 text-lg">An Inspiring Short Film</h2>
+                    <h2 className="font-semibold text-gray-900 text-xl">An Inspiring Short Film</h2>
                     <div className="flex items-center gap-1 text-gray-500 text-xs">
                       <img src="/ojo.webp" alt="Vistas" className="w-4 h-4" />
                       <span>80,989</span>
@@ -167,10 +164,10 @@ export default function Home() {
                 </div>
               </div>
   
-              {/* Tarjeta perfil + flechas + hashtags */}
+              
               <div className="flex flex-col lg:flex-row items-start gap-6">
                 
-                {/* Perfil */}
+                
                 <div className="bg-white rounded-2xl p-6 shadow-sm flex flex-col sm:flex-row flex-1">
                   <img 
                     src="/perfil2.webp" 
@@ -181,16 +178,18 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-gray-900">Alex Morrison</h3>
                     <p className="text-gray-600 mb-4">Senior Journalist</p>
                     <div className="grid grid-cols-3 gap-4 mb-6">
-                      {[
-                        { label: "Articles", value: "34" },
-                        { label: "Followers", value: "980" },
-                        { label: "Rating", value: "8.9" }
-                      ].map((stat, i) => (
-                        <div key={i} className="text-center">
-                          <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                          <p className="text-sm text-gray-500">{stat.label}</p>
-                        </div>
-                      ))}
+                      <div className="text-center">
+                        <p className="text-2xl font-bold text-gray-900">34</p>
+                        <p className="text-sm text-gray-500">Articles</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-2xl font-bold text-gray-900">980</p>
+                        <p className="text-sm text-gray-500">Followers</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-2xl font-bold text-gray-900">8.9</p>
+                        <p className="text-sm text-gray-500">Rating</p>
+                      </div>
                     </div>
                     <div className="flex gap-3">
                       <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
@@ -203,7 +202,7 @@ export default function Home() {
                   </div>
                 </div>
   
-                {/* Flechas + Hashtags */}
+                
                 <div className="flex flex-col items-center gap-4">
                   <div className="flex gap-4">
                     <button className="w-16 h-16 flex items-center justify-center bg-white rounded-full shadow hover:bg-gray-100">
@@ -214,27 +213,19 @@ export default function Home() {
                     </button>
                   </div>
                   <div className="bg-white rounded-2xl p-4 shadow-sm w-56">
-                    <h4 className="font-semibold text-gray-900 mb-4">Hashtags</h4>
                     <div className="flex flex-wrap gap-2">
-                      {["Donald Trump", "USA", "Politics", "2020"].map((tag, i) => (
-                        <span
-                          key={i}
-                          className={`px-3 py-1 rounded-full text-sm ${
-                            tag === "2020"
-                              ? "bg-blue-100 text-blue-600 font-medium border border-blue-200"
-                              : "bg-gray-100 text-gray-700"
-                          }`}
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                      <span className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700">Donald Trump</span>
+                      <span className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700">USA</span>
+                      <span className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700">Politics</span>
+                      <span className="px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-600 font-medium border border-blue-200">2020</span>
                     </div>
                   </div>
                 </div>
               </div>
+  
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     );
   }
